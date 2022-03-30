@@ -28,11 +28,10 @@ data <- data%>%
   select(-c(col))%>%
   pivot_longer(2:all_of(col2))%>%
   group_by(Commune)%>%
-  mutate(value=value/sum(value))%>%
+  mutate(value=value/sum(value,na.rm = T))%>%
   mutate(name=stringi::stri_trans_general(name,id = "Latin-ASCII"),   name=snakecase::to_snake_case(name) )%>%
   pivot_wider(names_from = name,values_from = value,names_prefix = "Part_")%>%
-  ungroup()%>%
-  muta
+  ungroup()
 
 
 assign(sheet[i],data)}
