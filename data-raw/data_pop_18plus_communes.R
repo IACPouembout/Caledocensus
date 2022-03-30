@@ -1,4 +1,4 @@
-pacman::p_load("tidyverse","openxlsx","here","readxl")
+pacman::p_load("tidyverse","openxlsx","here","readxl","sf","stringi","snakecase")
 
 sheet <- openxlsx::getSheetNames(here("data-raw","pop-18ansetplus.xlsx"))
 
@@ -31,16 +31,22 @@ data <- data%>%
   mutate(value=value/sum(value))%>%
   mutate(name=stringi::stri_trans_general(name,id = "Latin-ASCII"),   name=snakecase::to_snake_case(name) )%>%
   pivot_wider(names_from = name,values_from = value,names_prefix = "Part_")%>%
-  ungroup()
+  ungroup()%>%
+  muta
 
 
 assign(sheet[i],data)}
 
-
 pop_18plus_communes <- left_join(Genre,Communaute)%>%
   left_join(Tranche_age)%>%
   left_join(CSP)%>%
-  left_join(Total)
+  left_join(Total)%>%
+  mutate(Province=case_when(Commune %in% c("Boulouparis" ,"Bourail" ,"Dumbea","Farino","Ile des pins", "La foa","Moindou","Mont dore","Noumea","Paita","Thio","Yate")~"Province Sud",
+                            Commune %in% c("Mare","Lifou","Ile des pins")~"Province des Iles",
+                            TRUE~ "Province Nord"))%>%
+relocate(Province,.before = Commune)  
+
+
 
 usethis::use_data(pop_18plus_communes, overwrite = TRUE)
 

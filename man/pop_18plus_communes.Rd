@@ -3,10 +3,11 @@
 \docType{data}
 \name{pop_18plus_communes}
 \alias{pop_18plus_communes}
-\title{Données brutes du recensement 2019 de Nouvelle-Calédonie - Individus}
+\title{Données aggregées du recensement 2019 de Nouvelle-Calédonie - Individus de 18 ans et plus par commune}
 \format{
-A tibble with 33 rows and 26variables:
+A tibble with 33 rows and 26 variables:
 \describe{
+\item{Province}{}
 \item{Commune}{}
 \item{Part_femme}{}
 \item{Part_homme}{}
@@ -42,7 +43,6 @@ A tibble with 33 rows and 26variables:
 pop_18plus_communes
 }
 \description{
-Chaque ligne représente un individu, identifié par la variable ID, et dont le logement est identifié par la variable IDLOG.
-Les données sont géolocalisées à l'échelle Provinciale.
+Chaque ligne représente une commune, identifiée par la variable Commune, et associée à différentes variables mesurant la part parmi les individus de 18 ans et plus.
 }
 \keyword{datasets}
