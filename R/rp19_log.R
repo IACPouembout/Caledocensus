@@ -56,7 +56,7 @@
 #' \item{WC}{Equipement du logement en WC à l’intérieur}
 #' }
 #' 
-#' #' @source \url{https://www.isee.nc/publications/la-nouvelle-caledonie-en-cartes-et-en-chiffres/donnees-du-recensement-2019-en-open-data}
+#' @source \url{https://www.isee.nc/publications/la-nouvelle-caledonie-en-cartes-et-en-chiffres/donnees-du-recensement-2019-en-open-data}
 #' 
 
 "rp19_log"
