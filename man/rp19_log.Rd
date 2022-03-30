@@ -57,8 +57,9 @@ A tibble with 109,025 rows and 47 variables:
 \item{VOIT}{Nombre de voiture}
 \item{WC}{Equipement du logement en WC à l’intérieur}
 }
-
-#' @source \url{https://www.isee.nc/publications/la-nouvelle-caledonie-en-cartes-et-en-chiffres/donnees-du-recensement-2019-en-open-data}
+}
+\source{
+\url{https://www.isee.nc/publications/la-nouvelle-caledonie-en-cartes-et-en-chiffres/donnees-du-recensement-2019-en-open-data}
 }
 \usage{
 rp19_log
