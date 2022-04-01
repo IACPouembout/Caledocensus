@@ -1,6 +1,6 @@
 #' Données agrégées du recensement 2019 de Nouvelle-Calédonie - Individus de 18 ans et plus par commune
 #'
-#' Jeu de données présentant, pour l'année 2019, les proportions par commune selon le genre, la tranche d'âge, la communauté et la CSP, parmi les individus de 18 ans et plus.
+#' Jeu de données présentant, pour l'année 2019, les proportions par commune selon le genre, la tranche d'âge, la communauté et la CSP, parmi les individus de 18 ans et plus. La part du Oui (%) au référendum de 2020 est également inclue dans le jeu de données. 
 #'
 #' @format A tibble with 33 rows and 26 variables:
 #' \describe{
@@ -31,6 +31,7 @@
 #' \item{Part_retraite}{}
 #' \item{Part_inactif}{}
 #' \item{Pop_18_plus_total}{}
+#' \item{Part_Oui_2020}{}
 #' }
 #' @source \url{https://www.isee.nc/population/recensement/structure-de-la-population-et-evolutions}
 
