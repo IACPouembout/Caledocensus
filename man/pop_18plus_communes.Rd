@@ -34,6 +34,7 @@ A tibble with 33 rows and 26 variables:
 \item{Part_retraite}{}
 \item{Part_inactif}{}
 \item{Pop_18_plus_total}{}
+\item{Pop_18_plus_classe}{}
 \item{Part_Oui_2020}{}
 }
 }

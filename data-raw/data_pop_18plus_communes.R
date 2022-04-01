@@ -53,6 +53,36 @@ pop_18plus_communes <- left_join(Genre,Communaute)%>%
 relocate(Province,.before = Commune)%>%
   left_join(referendum_2020)
 
+options(scipen = 999)
+pop_18plus_communes$Pop_18_plus_classe <- cut(pop_18plus_communes$Pop_18_plus_total,
+       include.lowest = TRUE,
+       right = FALSE,
+       dig.lab = 6,
+       breaks = c(440, 1200, 1800, 2600, 4000, 73000)
+)
+
+pop_18plus_communes <- pop_18plus_communes%>%
+  relocate(Pop_18_plus_classe,.after =Pop_18_plus_total)
+
+
+pop_18plus_communes$Pop_18_plus_classe<- pop_18plus_communes$Pop_18_plus_classe %>%
+  fct_recode(
+    "De 440 à 1200 individus" = "[440,1200)",
+    "De 1200 à 1800 individus" = "[1200,1800)",
+    "De 1800 à 2600 individus" = "[1800,2600)",
+    "De 2600 à 4000 individus" = "[2600,4000)",
+    "Plus de 4000 individus" = "[4000,73000]"
+  )
+
+
+
+pop_18plus_communes$Pop_18_plus_classe <- pop_18plus_communes$Pop_18_plus_classe %>%
+  fct_relevel(
+    "De 440 à 1200 individus", "De 1200 à 1800 individus", "De 1800 à 2600 individus",
+    "De 2600 à 4000 individus", "Plus de 4000 individus"
+  )
+
+
 
 
 usethis::use_data(pop_18plus_communes, overwrite = TRUE)
