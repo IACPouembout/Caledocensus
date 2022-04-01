@@ -65,7 +65,7 @@ A tibble with 109,025 rows and 47 variables:
 rp19_log
 }
 \description{
-Chaque ligne représente un logement, identifié par la variable IDLOG, reliables à la table individus.
-Les données sont géolocalisées à l'échelle Provinciale.
+Données brutes du recensement calédonien 2019, version logement. Chaque ligne représente un logement, identifié par la variable IDLOG, reliables à la table individus.
+Les données sont à l'échelle Provinciale.
 }
 \keyword{datasets}

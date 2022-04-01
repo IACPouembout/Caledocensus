@@ -1,6 +1,6 @@
-#' Données aggregées du recensement 2019 de Nouvelle-Calédonie - Individus de 18 ans et plus par commune
+#' Données agrégées du recensement 2019 de Nouvelle-Calédonie - Individus de 18 ans et plus par commune
 #'
-#' Chaque ligne représente une commune, identifiée par la variable Commune, et associée à différentes variables mesurant la part parmi les individus de 18 ans et plus.
+#' Jeu de données présentant, pour l'année 2019, les proportions par commune selon le genre, la tranche d'âge, la communauté et la CSP, parmi les individus de 18 ans et plus.
 #'
 #' @format A tibble with 33 rows and 26 variables:
 #' \describe{

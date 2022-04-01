@@ -1,4 +1,4 @@
-pacman::p_load("tidyverse","openxlsx","here","readxl","sf","stringi","snakecase")
+pacman::p_load("tidyverse","openxlsx","here","readxl","stringi","snakecase")
 
 sheet <- openxlsx::getSheetNames(here("data-raw","pop-18ansetplus.xlsx"))
 
@@ -40,8 +40,8 @@ pop_18plus_communes <- left_join(Genre,Communaute)%>%
   left_join(Tranche_age)%>%
   left_join(CSP)%>%
   left_join(Total)%>%
-  mutate(Province=case_when(Commune %in% c("Boulouparis" ,"Bourail" ,"Dumbea","Farino","Ile des pins", "La foa","Moindou","Mont dore","Noumea","Paita","Thio","Yate")~"Province Sud",
-                            Commune %in% c("Mare","Lifou","Ile des pins")~"Province des Iles",
+  mutate(Province=case_when(Commune %in% c("Boulouparis" ,"Bourail" ,"Dumbea","Farino","Ile des pins", "La foa","Moindou","Mont dore","Noumea","Paita","Sarramea","Thio","Yate")~"Province Sud",
+                            Commune %in% c("Mare","Lifou","Ouvea")~"Province des Iles",
                             TRUE~ "Province Nord"))%>%
 relocate(Province,.before = Commune)  
 
