@@ -23,9 +23,9 @@ colnames(evo_pop_communaute) <- names_1_2
 
 
 evo_pop_communaute<- evo_pop_communaute%>%
-  pivot_longer(2:21,names_to = c("Province","Annee"), values_to = "Effectifs",names_sep = "_")%>%
+  pivot_longer(2:21,names_to = c("Province","Annee"), values_to = "Pop",names_sep = "_")%>%
   rename("Communaute"=1)%>%
-  mutate(Effectifs=as.numeric(as.character(Effectifs)),Annee=as.numeric(as.character(Annee)))
+  mutate(Pop=as.numeric(as.character(Pop)),Annee=as.numeric(as.character(Annee)))
 
 evo_pop_communaute$Communaute <- evo_pop_communaute$Communaute %>%
   fct_recode(

@@ -10,7 +10,7 @@ A tibble with 363 rows and 4variables:
 \item{Province}{}
 \item{Commune}{}
 \item{Annee}{}
-\item{Effectifs}{}
+\item{Pop}{}
 }
 }
 \source{

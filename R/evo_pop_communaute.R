@@ -7,7 +7,7 @@
 #' \item{Communaute}{}
 #' \item{Province}{}
 #' \item{Annee}{}
-#' \item{Effectifs}{}
+#' \item{Pop}{}
 #' }
 #' @source \url{https://www.isee.nc/population/recensement/structure-de-la-population-et-evolutions}
 
