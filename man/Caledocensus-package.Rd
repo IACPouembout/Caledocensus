@@ -5,9 +5,6 @@
 \alias{Caledocensus}
 \alias{Caledocensus-package}
 \title{Caledocensus: Import data from New Caledonian census}
-\description{
-Load data from New Caledonian census and create maps with nc_mapping().
-}
 \author{
 \strong{Maintainer}: Jonas  Brouillon \email{jonas.brouillon@iac.nc}
 

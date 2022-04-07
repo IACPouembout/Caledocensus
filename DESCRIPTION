@@ -3,7 +3,6 @@ Title: Import data from New Caledonian census
 Version: 0.0.0.9000
 Authors@R: 
     person(given="Jonas" ,family=" Brouillon",email= "jonas.brouillon@iac.nc", role = c("aut","cre"))
-Description: Load data from New Caledonian census and create maps with nc_mapping().
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
@@ -16,7 +15,4 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Imports: 
-    ggplot2,
-    ggspatial,
-    sf,
     tibble
