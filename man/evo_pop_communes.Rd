@@ -20,6 +20,6 @@ A tibble with 363 rows and 4variables:
 evo_pop_communes
 }
 \description{
-Jeu de données présentant l'évolution de la population par commune depuis 1969.Chaque ligne représente une commune, lors d'une année identifiée par la variable "Anneée".
+Jeu de données présentant l'évolution de la population par commune depuis 1969.Chaque ligne représente une commune, lors d'une année identifiée par la variable "Annee".
 }
 \keyword{datasets}
