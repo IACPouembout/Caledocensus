@@ -36,11 +36,7 @@ data <- data%>%
 
 assign(sheet[i],data)}
 
-referendum_2020 <- readxl::read_xlsx(here("data-raw", "ref2020.xlsx"))%>%
-  mutate(Commune=stringi::stri_trans_general(str_to_sentence(Communes),id = "Latin-ASCII"),
-         Commune=recode(Commune,"Kaala gomen"="Kaala-gomen"),
-         Part_Oui_2020=Oui/Votants)%>%
-  select(Commune,Part_Oui_2020)
+
 
 
 pop_18plus_communes <- left_join(Genre,Communaute)%>%
@@ -50,8 +46,7 @@ pop_18plus_communes <- left_join(Genre,Communaute)%>%
   mutate(Province=case_when(Commune %in% c("Boulouparis" ,"Bourail" ,"Dumbea","Farino","Ile des pins", "La foa","Moindou","Mont dore","Noumea","Paita","Sarramea","Thio","Yate")~"Province Sud",
                             Commune %in% c("Mare","Lifou","Ouvea")~"Province des Iles",
                             TRUE~ "Province Nord"))%>%
-relocate(Province,.before = Commune)%>%
-  left_join(referendum_2020)
+relocate(Province,.before = Commune)
 
 options(scipen = 999)
 pop_18plus_communes$Pop_18_plus_classe <- cut(pop_18plus_communes$Pop_18_plus_total,

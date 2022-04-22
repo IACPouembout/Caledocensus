@@ -32,7 +32,6 @@
 #' \item{Part_inactif}{}
 #' \item{Pop_18_plus_total}{}
 #' \item{Pop_18_plus_classe}{}
-#' \item{Part_Oui_2020}{}
 #' }
 #' @source \url{https://www.isee.nc/population/recensement/structure-de-la-population-et-evolutions}
 
